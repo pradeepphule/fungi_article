@@ -1,0 +1,6 @@
+sm_type <- read.csv("~/bin/Final_clcbioandabyss/analysis/sm_type", sep="")
+  View(sm_type)
+
+> ht=Heatmap(as.matrix(sm_type1), name="Type",col = c("lightblue", "Brown",
++                                                  "Peru", "lavender","Orchid","grey","cyan","coral","Darkcyan","Pink"),column_names_max_height = unit(0.5,"cm"))+ Heatmap(as.matrix(blast_sm), name = "Identity", col = colorRamp2(c(0,0.4,1), c("white", "white","orange")), cluster_columns = FALSE, cluster_rows = FALSE, column_title = "Occurence of SM genes", column_title_gp = gpar(fontsize = 10),column_names_max_height = unit(2,"cm"))
+> draw(ht, heatmap_legend_side = "left")

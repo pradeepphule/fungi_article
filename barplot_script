@@ -1,0 +1,22 @@
+These commands were run after ballgown script executed.
+
+> head(fpkm,10)
+   FPKM.pp153_2_rep1 FPKM.pp153_3_rep2 FPKM.pp153_4_rep1 FPKM.pp153_4_rep2
+1          3.3697362         3.3501720         2.1237639         2.1237639
+2         11.1628875        11.0885659        10.8292489        10.8292489
+3          1.6192745         1.0396796         1.3570638         1.3570638
+4          3.2430833         3.2654091         1.9359364         1.9359364
+5          0.0000000         1.1670059         1.3771138         1.3771138
+6          2.3945430         2.1817616         1.5345716         1.5345716
+7          1.3869064         0.3079391         0.9336451         0.9336451
+8          3.1358760         3.1460427         3.5337422         3.5337422
+9          0.1874587         0.1060615         0.2816971         0.2816971
+10         1.6956514         1.7940070         1.6901757         1.6901757
+> View(fpkm)
+> View(fpkm)
+> colnames(fpkm)
+[1] "FPKM.pp153_2_rep1" "FPKM.pp153_3_rep2" "FPKM.pp153_4_rep1" "FPKM.pp153_4_rep2"
+> colnames(fpkm)<-c("salt1","salt2","nosalt1","nosalt2")
+> colnames(fpkm)
+[1] "salt1"   "salt2"   "nosalt1" "nosalt2"
+> boxplot(fpkm, col=as.numeric(pheno_data$Medium), las=2,ylab='log2(FPKM+1)',main="Gene abundance distribution")
